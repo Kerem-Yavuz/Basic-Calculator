@@ -60,3 +60,22 @@ function solve() {
 function clr() {
     document.getElementById("screen").value = "";
 }
+
+
+// Function to dynamically resize the font size to fit within the button
+function resizeFont(button) {
+    const maxFontSize = 3.5; // Maximum font size in rem
+    let fontSize = maxFontSize;
+    button.style.fontSize = fontSize + 'rem';
+    
+    while (button.scrollWidth > button.clientWidth || button.scrollHeight > button.clientHeight) {
+        fontSize -= 0.1;
+        button.style.fontSize = fontSize + 'rem';
+        if (fontSize <= 0.5) break; // Minimum font size to prevent infinite loop
+    }
+}
+
+// Attach the resize function to each button
+document.querySelectorAll('input[type="button"]').forEach(button => {
+    resizeFont(button);
+});
