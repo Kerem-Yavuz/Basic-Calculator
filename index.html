@@ -1,54 +1,50 @@
 <!DOCTYPE html>
 <html>
-<body>
-    <script src="script.js"></script>
+<head>
+    <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8" />
-</body>
-
-<main>
-    <table id="calculator">
+</head>
+<body>
+    <main>
+        <table id="calcu">
             <tr>
-            <td colspan="3"><input type="text" id="screen"></td>
-            <td colspan="2"><input type="submit" id="button" value="="></td>
-            <td><input type="button" id="button" value="x&sup2;"></td>
+                <td colspan="3"><input type="text" id="screen"></td>
+                <td colspan="2"><input type="submit" id="button" value="=" onclick="solve()"></td>
+                <td><input type="button" id="button" value="x&sup2;" onclick="dis('^2')" onkeydown="myFunction(event)"></td>
             </tr>
-        
             <tr> 
-                <td><input type="button" id="button" value="1"></td> 
-                <td><input type="button" id="button" value="2"></td> 
-                <td><input type="button" id="button" value="3"></td> 
-                
-                <td colspan="2"><input type="button" id="button" value="/"></td> 
-                <td><input type="button" id="button" value="x&sup3;"></td>
+                <td><input type="button" id="button" value="1" onclick="dis('1')" onkeydown="myFunction(event)"></td> 
+                <td><input type="button" id="button" value="2" onclick="dis('2')" onkeydown="myFunction(event)"></td> 
+                <td><input type="button" id="button" value="3" onclick="dis('3')" onkeydown="myFunction(event)"></td> 
+                <td colspan="2"><input type="button" id="button" value="/" onclick="dis('/')" onkeydown="myFunction(event)"></td> 
+                <td><input type="button" id="button" value="x&sup3;" onclick="dis('^3')" onkeydown="myFunction(event)"></td>
             </tr> 
             <tr> 
-                <td><input type="button" id="button" value="4"></td> 
-                <td><input type="button" id="button" value="5"></td> 
-                <td><input type="button" id="button" value="6"></td> 
-                
-                <td colspan="2"><input type="button" id="button" value="*"></td> 
-                <td><input type="button" id="button" value="&radic;"></td>
+                <td><input type="button" id="button" value="4" onclick="dis('4')" onkeydown="myFunction(event)"></td> 
+                <td><input type="button" id="button" value="5" onclick="dis('5')" onkeydown="myFunction(event)"></td> 
+                <td><input type="button" id="button" value="6" onclick="dis('6')" onkeydown="myFunction(event)"></td> 
+                <td colspan="2"><input type="button" id="button" value="*" onclick="dis('*')" onkeydown="myFunction(event)"></td> 
+                <td><input type="button" id="button" value="&radic;" onclick="dis('sqrt(')" onkeydown="myFunction(event)"></td>
             </tr> 
             <tr> 
-                <td><input type="button" id="button" value="7"></td> 
-                <td><input type="button" id="button" value="8"></td> 
-                <td><input type="button" id="button" value="9"></td>
-                
-                <td colspan="2"><input type="button" id="button" value="-"></td> 
-                <td><input type="button" id="button" value="&#8731;"></td> 
+                <td><input type="button" id="button" value="7" onclick="dis('7')" onkeydown="myFunction(event)"></td> 
+                <td><input type="button" id="button" value="8" onclick="dis('8')" onkeydown="myFunction(event)"></td> 
+                <td><input type="button" id="button" value="9" onclick="dis('9')" onkeydown="myFunction(event)"></td>
+                <td colspan="2"><input type="button" id="button" value="-" onclick="dis('-')" onkeydown="myFunction(event)"></td> 
+                <td><input type="button" id="button" value="&#8731;" onclick="dis('cbrt(')" onkeydown="myFunction(event)"></td> 
             </tr> 
             <tr> 
-                <td><input type="button" id="button" value="0"></td> 
-                <td><input type="button" id="button" value="."></td> 
-                <td><input type="button" id="button" value="&Pi;"></td>
                 
-                <td colspan="2"><input type="button" id="button" value="+"></td> 
-                <td><input type="button" id="button" value="e"></td> 
+                <td><input type="button" id="button" value="." onclick="dis('.')" onkeydown="myFunction(event)"></td>
+                <td><input type="button" id="button" value="0" onclick="dis('0')" onkeydown="myFunction(event)"></td>  
+                <td><input type="button" id="button" value="&Pi;" onclick="dis('pi')" onkeydown="myFunction(event)"></td>
+                <td colspan="2"><input type="button" id="button" value="+" onclick="dis('+')" onkeydown="myFunction(event)"></td> 
+                <td><input type="button" id="button" value="&#400;" onclick="dis('e')" onkeydown="myFunction(event)"></td> 
             </tr>
-        
-    </table>
+        </table>
+    </main>
 
-</main>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js" integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
 </html>
