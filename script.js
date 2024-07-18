@@ -1,14 +1,18 @@
 // Function that displays value
+let Ans;
 function dis(val) {
     const screen = document.getElementById("screen");
 
     // Handling special characters and converting them to mathjs functions
     switch(val) {
+        case 'Ans':
+            screen.value += Ans;
+            break;
         case '^2':
-            screen.value += '**2';
+            screen.value += '^2';
             break;
         case '^3':
-            screen.value += '**3';
+            screen.value += '^3';
             break;
         case '&radic;':
             screen.value += '√(';
@@ -50,6 +54,7 @@ function solve() {
 
     try {
         let y = math.evaluate(x);
+        Ans = y;
         document.getElementById("screen").value = y;
     } catch (error) {
         document.getElementById("screen").value = "Error";
