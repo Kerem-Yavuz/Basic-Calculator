@@ -70,13 +70,18 @@
     word-wrap: break-word;
     outline: 5px solid #D6D6E7;
     height: 70px;
-    width: 500px;
+    width: 400px;
     font-size: 50px;
     text-align: left;
     
     transition: all 1s;
-    max-width: 300px;
+    max-width: 500px;
     font-weight: bold;
     font-family: 'Calculator', sans-serif;
     margin-left: 10px;
    }
+
+
+
+
+   
