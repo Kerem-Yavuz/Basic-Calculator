@@ -1,5 +1,6 @@
 // Function that displays value
 let Ans;
+let hide = false;
 function dis(val) {
     const screen = document.getElementById("screen");
 
@@ -71,7 +72,7 @@ function clr() {
 function resizeFont(button) {
     const maxFontSize = 3.5; // Maximum font size in rem
     let fontSize = maxFontSize;
-    button.style.fontSize = fontSize + 'rem';
+    button.style.fontSize = fontSize ;
     
     while (button.scrollWidth > button.clientWidth || button.scrollHeight > button.clientHeight) {
         fontSize -= 0.1;
@@ -84,3 +85,48 @@ function resizeFont(button) {
 document.querySelectorAll('input[type="button"]').forEach(button => {
     resizeFont(button);
 });
+
+function scientificHide() {
+    var symbols = document.querySelectorAll('.scientificButton');
+    var screen = document.getElementById('screen');
+    var screencell = document.getElementById('screenCell');
+    var cells = document.querySelectorAll('.cells');
+
+    if(!hide){
+    
+    screencell.colSpan = 3; // Change colspan to 3
+
+    
+    screen.style.width = "305px";
+
+    
+    symbols.forEach(function(symbol) {
+        symbol.style.display = 'none'; // Hide all elements with class 'scientificButton'
+    });
+
+    cells.forEach(function(symbol) {
+        symbol.style.display = 'none'; // Hide all elements with class 'scientificButton'
+    });
+    
+    hide = true;
+    }
+    else{
+        
+    screencell.colSpan = 4; // Change colspan to 3
+
+    
+    screen.style.width = "410px";
+
+    
+    symbols.forEach(function(symbol) {
+        symbol.style.display = 'inline'; // Hide all elements with class 'scientificButton'
+    });
+
+    cells.forEach(function(symbol) {
+        symbol.style.display = 'inline'; // Hide all elements with class 'scientificButton'
+    });
+    
+    
+    hide = false;
+    }
+}
