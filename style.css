@@ -38,7 +38,8 @@
   touch-action: manipulation;
   white-space: nowrap;
   will-change: box-shadow,transform;
-  font-size: 18px;
+  font-size: 50px;
+  margin: 2px 2px 2px 2px;
 }
 
 #button:focus {
@@ -59,13 +60,13 @@
 
 #screen {
     background-color: #FCFCFD;
-    border: 2ex solid none;
+    border: 1ex solid none;
     border-top-width: 0.2em;
     margin: 0;
     padding: 0;
     color: #0c0c0f;
     word-wrap: break-word;
-    outline: 10px solid #D6D6E7;
+    outline: 5px solid #D6D6E7;
     height: 70px;
     width: 500px;
     font-size: 50px;
@@ -75,4 +76,5 @@
     max-width: 300px;
     font-weight: bold;
     font-family: 'Calculator', sans-serif;
+    margin-left: 10px;
    }
