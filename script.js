@@ -1,5 +1,5 @@
 // Function that displays value
-let Ans;
+let Ans = 0;
 let hide = false;
 function dis(val) {
     const screen = document.getElementById("screen");
@@ -87,26 +87,24 @@ document.querySelectorAll('input[type="button"]').forEach(button => {
 });
 
 function scientificHide() {
-    var symbols = document.querySelectorAll('.scientificButton');
     var screen = document.getElementById('screen');
     var screencell = document.getElementById('screenCell');
     var cells = document.querySelectorAll('.cells');
+    var calcu = document.getElementById("calcu");
+    var hider = document.getElementById("hider");
 
     if(!hide){
     
     screencell.colSpan = 3; // Change colspan to 3
 
+    screen.style.width = "307px";
     
-    screen.style.width = "305px";
-
-    
-    symbols.forEach(function(symbol) {
-        symbol.style.display = 'none'; // Hide all elements with class 'scientificButton'
-    });
-
+    calcu.style.marginLeft = "38%";
     cells.forEach(function(symbol) {
         symbol.style.display = 'none'; // Hide all elements with class 'scientificButton'
     });
+
+    hider.value = ">";
     
     hide = true;
     }
@@ -114,19 +112,15 @@ function scientificHide() {
         
     screencell.colSpan = 4; // Change colspan to 3
 
-    
-    screen.style.width = "410px";
-
-    
-    symbols.forEach(function(symbol) {
-        symbol.style.display = 'inline'; // Hide all elements with class 'scientificButton'
-    });
+    calcu.style.marginLeft = "30%";
+    screen.style.width = "415px";
 
     cells.forEach(function(symbol) {
         symbol.style.display = 'inline'; // Hide all elements with class 'scientificButton'
     });
     
-    
+    hider.value = "<";
+
     hide = false;
     }
 }
